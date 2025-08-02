@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct React Test</title>
+</head>
+<body>
+  <h1>Simple Test with Direct React Import</h1>
+  <div id="react-test"></div>
+  
+  <script type="module">
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    
+    const App = () => {
+      return React.createElement('div', null, 
+        React.createElement('h2', null, 'Portfolio Test Component'),
+        React.createElement('p', null, 'This is a test for Paul Bourgois portfolio')
+      );
+    };
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('react-test');
+      console.log('Container element:', container);
+      try {
+        const root = ReactDOM.createRoot(container);
+        root.render(React.createElement(App));
+        console.log('React rendered in direct-test.html');
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  </script>
+</body>
+</html>
