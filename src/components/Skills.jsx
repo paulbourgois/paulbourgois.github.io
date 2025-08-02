@@ -39,32 +39,7 @@ export default function Skills() {
         ))}
       </div>
       
-      {/* Section progression - Boston Dynamics style */}
-      <div className="mt-16 border-t border-black/10 pt-10">
-        <div className="font-mono text-xs text-yellow-500/80 mb-6 tracking-widest">
-          PERFORMANCE METRICS
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="relative">
-            <div className="text-4xl font-bold text-black mb-2">3+</div>
-            <div className="text-black/70 font-medium">Années d'expérience</div>
-            <div className="absolute top-0 right-0 h-full w-1 bg-yellow-500"></div>
-          </div>
-          
-          <div className="relative">
-            <div className="text-4xl font-bold text-black mb-2">15+</div>
-            <div className="text-black/70 font-medium">Projets réalisés</div>
-            <div className="absolute top-0 right-0 h-full w-1 bg-yellow-500"></div>
-          </div>
-          
-          <div className="relative">
-            <div className="text-4xl font-bold text-black mb-2">5+</div>
-            <div className="text-black/70 font-medium">Technologies maîtrisées</div>
-            <div className="absolute top-0 right-0 h-full w-1 bg-yellow-500"></div>
-          </div>
-        </div>
-      </div>
+      {/* Fin des compétences techniques */}
     </section>
   );
 }

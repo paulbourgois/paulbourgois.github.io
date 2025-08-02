@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Paul Bourgois - Portfolio</title>
+  <script>
+    // Script pour gérer les routes SPA sur GitHub Pages
+    const path = window.location.pathname;
+    const segments = path.split('/');
+    const repoName = segments[1] === 'paulbourgois.github.io' ? '/paulbourgois.github.io/' : '/';
+    
+    localStorage.setItem('spa-redirect', path);
+    window.location.href = repoName;
+  </script>
+</head>
+<body>
+  <p>Redirection en cours...</p>
+</body>
+</html>

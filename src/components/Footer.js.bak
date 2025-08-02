@@ -1,0 +1,29 @@
+import React from "react";
+
+// Liste de messages humoristiques liés à la robotique
+const funnyMessages = [
+  "Si vous voyez un robot qui vous ressemble, fuyez... c'est probablement moi qui l'ai programmé",
+  "Les robots ne rêvent peut-être pas de moutons électriques, mais les miens rêvent de domination mondiale",
+  "Je ne dis pas que je suis Batman, mais avez-vous déjà vu un robot et moi dans la même pièce ?",
+  "Mon code est comme mon café : parfois fort, parfois buggé, mais toujours nécessaire",
+  "Dans un monde d'IA, restez humain... ou du moins, faites semblant",
+  "404: Blague non trouvée. Veuillez redémarrer l'ingénieur",
+  "Je pourrais programmer un robot pour faire ce portfolio, mais alors qui programmerait le robot ?",
+  "Les 3 lois de la robotique : 1) Ne pas nuire à l'humain 2) Obéir à l'humain 3) Faire le café quand demandé"
+];
+
+export default function Footer() {
+  // Sélectionne un message aléatoire
+  const randomMessage = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
+  
+  return (
+    <footer className="text-center py-8 mt-12 border-t border-gray-100">
+      <div className="glass-card mx-auto mb-6 py-3 px-6 max-w-2xl">
+        <p className="text-gray-700 italic">"{randomMessage}"</p>
+      </div>
+      <p className="text-xs text-gray-400">
+        © {new Date().getFullYear()} Paul Bourgois — <a href="https://github.com/paulbourgois/paulbourgois.github.io" className="underline hover:text-yellow-500 transition-colors">GitHub</a>
+      </p>
+    </footer>
+  );
+}
