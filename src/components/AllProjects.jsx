@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useScrollToSection } from "../hooks/useScrollToSection.js";
+import NavLink from "./NavLink.jsx";
 import Navbar from "./Navbar.jsx";
 
 const allProjects = [
@@ -151,12 +152,18 @@ export default function AllProjects() {
       
       <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="mb-8">
-          <Link to="/" className="btn-primary inline-flex items-center gap-2 py-2 px-4 rounded bg-yellow-500 text-black hover:bg-yellow-600 transition-colors cursor-pointer">
+          <button 
+            className="btn-primary inline-flex items-center gap-2 py-2 px-4 rounded bg-yellow-500 text-black hover:bg-yellow-600 transition-colors cursor-pointer"
+            onClick={() => {
+              // Navigation directe et forcée vers la page d'accueil
+              window.open(`${window.location.origin}/`, "_self");
+            }}
+          >
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/>
             </svg>
             <span className="font-mono tracking-wider">RETOUR À L'ACCUEIL</span>
-          </Link>
+          </button>
         </div>
         
         <h2 className="section-title mb-8">Projets Principaux</h2>

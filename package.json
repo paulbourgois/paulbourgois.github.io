@@ -2,7 +2,7 @@
   "name": "paulbourgois.github.io",
   "version": "1.0.0",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "description": "Portfolio de Paul Bourgois, ingénieur en robotique.",
   "main": "src/main.jsx",
   "homepage": "https://paulbourgois.github.io/",
