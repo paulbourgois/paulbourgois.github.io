@@ -5,12 +5,33 @@
   "type": "module",
   "description": "Portfolio de Paul Bourgois, ingénieur en robotique.",
   "main": "src/main.jsx",
+  "homepage": "https://paulbourgois.github.io",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
+    "build:analyze": "vite build --mode production --analyze",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --no-history --dotfiles",
+    "deploy:script": "node deploy.cjs"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "terser": "^5.43.1",
+    "vite": "^4.3.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulbourgois/paulbourgois.github.io.git"
   },
   "keywords": [
     "portfolio",
@@ -19,17 +40,7 @@
   ],
   "author": "Paul Bourgois",
   "license": "MIT",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^7.7.1"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
-    "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2",
-    "vite": "^4.3.9"
+  "bugs": {
+    "url": "https://github.com/paulbourgois/paulbourgois.github.io/issues"
   }
 }
