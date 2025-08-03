@@ -9,6 +9,15 @@
     <script>
       // Pour le support de HashRouter, assurez-vous que les liens internes (#) fonctionnent
       window.addEventListener('hashchange', function() {
+        // Si on navigue vers /all-projects, forcer le scroll vers le haut
+        if (window.location.hash.includes('/all-projects')) {
+          console.log('Navigation vers all-projects détectée, force scroll top');
+          window.scrollTo(0, 0);
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+          return;
+        }
+        
         // Scroll vers l'ancre si elle existe
         const hash = window.location.hash;
         if (hash && !hash.startsWith('#/')) {
@@ -17,6 +26,24 @@
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
+        }
+      });
+      
+      // Vérifier à chaque chargement de page si nous sommes sur /all-projects
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.hash.includes('/all-projects')) {
+          console.log('Page all-projects chargée, force scroll top');
+          // Force scroll immédiat
+          window.scrollTo(0, 0);
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+          
+          // Et encore après un court délai
+          setTimeout(function() {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+          }, 100);
         }
       });
     </script>

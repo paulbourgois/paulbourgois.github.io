@@ -32,6 +32,51 @@ function HomePage() {
 }
 
 function App() {
+  // Effet pour forcer le scroll vers le haut lors des changements de route
+  React.useEffect(() => {
+    // Définir une fonction pour gérer les changements de hash
+    const handleHashChange = () => {
+      // Si c'est la route /all-projects, forcer le scroll vers le haut
+      if (window.location.hash.includes('/all-projects')) {
+        console.log("Route /all-projects détectée, forçage du scroll");
+        
+        // Forcer le scroll avec plusieurs méthodes
+        window.scrollTo(0, 0);
+        if (document.documentElement) document.documentElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+        
+        // Utiliser requestAnimationFrame pour s'assurer que le scroll
+        // se produit après les calculs de mise en page
+        requestAnimationFrame(() => {
+          window.scrollTo(0, 0);
+          if (document.documentElement) document.documentElement.scrollTop = 0;
+          if (document.body) document.body.scrollTop = 0;
+          
+          // Injecter un script pour une tentative immédiate
+          const script = document.createElement('script');
+          script.textContent = `window.scrollTo(0, 0);`;
+          document.head.appendChild(script);
+          setTimeout(() => document.head.removeChild(script), 100);
+        });
+      }
+    };
+    
+    // Écouter les changements de hash
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Écouter aussi les événements de chargement de page
+    window.addEventListener('load', handleHashChange);
+    
+    // Forcer un scroll initial
+    handleHashChange();
+    
+    // Nettoyer les écouteurs d'événements
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('load', handleHashChange);
+    };
+  }, []);
+  
   return (
     <div className="app relative">
       {/* Grid background appliqué à toute la page */}

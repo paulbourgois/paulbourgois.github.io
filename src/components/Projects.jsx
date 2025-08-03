@@ -61,12 +61,31 @@ export default function Projects() {
         ))}
       </div>
       <div className="text-center mt-8">
-        <Link to="/all-projects" className="btn-primary inline-flex items-center gap-2">
+        <a 
+          href="/#/all-projects?top=true"
+          className="btn-primary inline-flex items-center gap-2 py-2 px-4 rounded bg-yellow-500 text-black hover:bg-yellow-600 transition-colors cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault(); // Empêcher le comportement par défaut du lien
+            
+            // Mettre un indicateur dans sessionStorage et localStorage
+            sessionStorage.setItem('scrollToTop', 'true');
+            localStorage.setItem('allProjectsScrollTop', 'true');
+            
+            // Ajouter un paramètre timestamp pour forcer un "reload" de la vue
+            const timestamp = Date.now();
+            const url = `${window.location.origin}/#/all-projects?top=true&t=${timestamp}`;
+            
+            console.log("Navigation vers AllProjects avec forçage scroll top");
+            
+            // Utiliser la méthode la plus directe possible
+            window.location.replace(url);
+          }}
+        >
           <span className="font-mono tracking-wider">VOIR TOUS LES PROJETS</span>
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z"/>
           </svg>
-        </Link>
+        </a>
       </div>
     </section>
   );

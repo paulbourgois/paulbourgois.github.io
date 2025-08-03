@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useScrollReset } from "../hooks/useScrollReset.js";
 import { useScrollToSection } from "../hooks/useScrollToSection.js";
 import NavLink from "./NavLink.jsx";
 import Navbar from "./Navbar.jsx";
@@ -132,16 +133,85 @@ const allProjects = [
 
 export default function AllProjects() {
   const navigate = useNavigate();
-  // Utiliser notre hook personnalisé pour le défilement
-  useScrollToSection();
   
-  // Faire défiler la page vers le haut au chargement du composant
+  // Utiliser notre hook de reset de scroll
+  useScrollReset();
+  
+  // Solution combinée pour forcer le scroll au début
+  const [isFixed, setIsFixed] = React.useState(true);
+  
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    // Fonction pour forcer le scroll haut avec toutes les méthodes connues
+    const forceScrollTop = () => {
+      console.log("AllProjects: Forçage du scroll vers le haut");
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      
+      // Utiliser requestAnimationFrame pour assurer que le scroll
+      // se produit après les calculs de mise en page
+      requestAnimationFrame(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      });
+    };
+    
+    // Injecter un script qui s'exécute immédiatement
+    const script = document.createElement('script');
+    script.textContent = `
+      // Forcer le scroll immédiatement
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    `;
+    document.head.appendChild(script);
+    
+    // Forcer le scroll au départ
+    forceScrollTop();
+    
+    // Nettoyer le flag de session s'il existe
+    if (sessionStorage.getItem('scrollToTop') === 'true') {
+      sessionStorage.removeItem('scrollToTop');
+    }
+    
+    // Utiliser plusieurs appels avec délai pour garantir le scroll top
+    const timers = [
+      setTimeout(forceScrollTop, 0),
+      setTimeout(forceScrollTop, 50),
+      setTimeout(() => {
+        forceScrollTop();
+        // Libérer la position fixe après que tout soit bien scrollé
+        setIsFixed(false);
+      }, 150),
+      // Un dernier appel pour être sûr
+      setTimeout(forceScrollTop, 300)
+    ];
+    
+    // Nettoyage des timers et du script
+    return () => {
+      timers.forEach(clearTimeout);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
   }, []);
   
+  // Si on vient d'un clic sur "Voir tous les projets", on affiche d'abord une version fixe
+  const pageStyle = isFixed ? { 
+    position: 'fixed', 
+    top: 0, 
+    left: 0, 
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden'
+  } : {};
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={pageStyle}>
+      {/* Ancre invisible avec id pour les liens d'ancrage */}
+      <div id="top" style={{ height: 0, width: 0, position: 'absolute', top: 0 }}></div>
+      
       <Navbar />
       <div className="hero-gradient py-20 flex flex-col items-center justify-center relative">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">Tous mes projets</h1>
