@@ -3,27 +3,47 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css'; // includes Tailwind
 
-console.log('main.jsx is executing');
+// Préchargement des actifs critiques
+const preloadAssets = () => {
+  // Cette fonction peut être utilisée pour précharger des images ou d'autres ressources
+  // importantes pour le premier affichage
+  console.log('Préchargement des actifs terminé');
+};
 
-// Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM loaded in main.jsx');
+// Fonction de rendu optimisée
+const renderApp = () => {
   const container = document.getElementById('root');
-  console.log('Root element:', container);
   
   if (container) {
     try {
       const root = ReactDOM.createRoot(container);
-      root.render(
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      );
-      console.log('React rendered successfully');
+      // StrictMode désactivé en production pour éviter le double rendu
+      // En développement, gardez StrictMode activé pour détecter les problèmes
+      const isProduction = process.env.NODE_ENV === 'production';
+      
+      if (isProduction) {
+        root.render(<App />);
+      } else {
+        root.render(
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        );
+      }
     } catch (error) {
-      console.error('Error rendering React:', error);
+      console.error('Erreur de rendu React:', error);
     }
-  } else {
-    console.error('Root element not found');
   }
-});
+};
+
+// Attendre que le DOM soit prêt puis rendre l'application
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    preloadAssets();
+    renderApp();
+  });
+} else {
+  // DOM déjà chargé
+  preloadAssets();
+  renderApp();
+}

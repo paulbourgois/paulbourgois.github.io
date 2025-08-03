@@ -7,14 +7,18 @@
     <title>Paul Bourgois | Ingénieur Robotique</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <script>
-      // Script pour gérer la redirection depuis la page 404.html
-      (function() {
-        const redirectPath = localStorage.getItem('spa-redirect');
-        if (redirectPath && redirectPath !== window.location.pathname) {
-          localStorage.removeItem('spa-redirect');
-          history.replaceState(null, null, redirectPath);
+      // Pour le support de HashRouter, assurez-vous que les liens internes (#) fonctionnent
+      window.addEventListener('hashchange', function() {
+        // Scroll vers l'ancre si elle existe
+        const hash = window.location.hash;
+        if (hash && !hash.startsWith('#/')) {
+          const cleanHash = hash.replace('#', '');
+          const element = document.getElementById(cleanHash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
         }
-      })();
+      });
     </script>
   </head>
   <body>

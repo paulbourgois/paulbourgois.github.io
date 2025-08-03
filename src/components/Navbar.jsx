@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import NavLink from "./NavLink.jsx";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,29 +29,31 @@ function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-yellow-500 flex items-center justify-center">
-              <span className="font-bold text-black">PB</span>
-            </div>
-            <span className="font-mono text-sm font-medium tracking-wider text-black">PAUL BOURGOIS</span>
+            <Link to="/" className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-yellow-500 flex items-center justify-center">
+                <span className="font-bold text-black">PB</span>
+              </div>
+              <span className="font-mono text-sm font-medium tracking-wider text-black">PAUL BOURGOIS</span>
+            </Link>
           </div>
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#about" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
+            <NavLink to="/#about" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               À PROPOS
-            </a>
-            <a href="#skills" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
+            </NavLink>
+            <NavLink to="/#skills" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               COMPÉTENCES
-            </a>
-            <a href="#projects" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
+            </NavLink>
+            <NavLink to="/#projects" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               PROJETS
-            </a>
-            <a href="#videos" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
+            </NavLink>
+            <NavLink to="/#videos" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               VIDÉOS
-            </a>
-            <a href="#contact" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
+            </NavLink>
+            <NavLink to="/#contact" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               CONTACT
-            </a>
+            </NavLink>
           </nav>
 
           {/* Mobile menu button */}
@@ -70,41 +74,41 @@ function Navbar() {
         {/* Mobile navigation */}
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 border-t border-black/10 pt-4">
-            <a 
-              href="#about" 
+            <NavLink 
+              to="/#about" 
               className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               À PROPOS
-            </a>
-            <a 
-              href="#skills" 
+            </NavLink>
+            <NavLink 
+              to="/#skills" 
               className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               COMPÉTENCES
-            </a>
-            <a 
-              href="#projects" 
+            </NavLink>
+            <NavLink 
+              to="/#projects" 
               className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               PROJETS
-            </a>
-            <a 
-              href="#videos" 
+            </NavLink>
+            <NavLink 
+              to="/#videos" 
               className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               VIDÉOS
-            </a>
-            <a 
-              href="#contact" 
+            </NavLink>
+            <NavLink 
+              to="/#contact" 
               className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               CONTACT
-            </a>
+            </NavLink>
           </nav>
         )}
       </div>

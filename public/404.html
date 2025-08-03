@@ -4,13 +4,32 @@
   <meta charset="utf-8">
   <title>Paul Bourgois - Portfolio</title>
   <script>
-    // Script pour gérer les routes SPA sur GitHub Pages
+    // Script pour gérer les routes SPA avec HashRouter sur GitHub Pages
     const path = window.location.pathname;
-    const segments = path.split('/');
-    const repoName = segments[1] === 'paulbourgois.github.io' ? '/paulbourgois.github.io/' : '/';
+    const query = window.location.search;
+    const hash = window.location.hash;
     
-    localStorage.setItem('spa-redirect', path);
-    window.location.href = repoName;
+    // Redirect to the homepage with the correct hash
+    let redirectPath = '/';
+    
+    if (path.indexOf('/all-projects') !== -1) {
+      redirectPath = '/#/all-projects';
+    } else if (path.indexOf('/about') !== -1) {
+      redirectPath = '/#about';
+    } else if (path.indexOf('/skills') !== -1) {
+      redirectPath = '/#skills';
+    } else if (path.indexOf('/projects') !== -1) {
+      redirectPath = '/#projects';
+    } else if (path.indexOf('/videos') !== -1) {
+      redirectPath = '/#videos';
+    } else if (path.indexOf('/contact') !== -1) {
+      redirectPath = '/#contact';
+    } else if (hash) {
+      // If there's already a hash, preserve it
+      redirectPath = '/' + hash;
+    }
+    
+    window.location.href = redirectPath;
   </script>
 </head>
 <body>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useScrollToSection } from "../hooks/useScrollToSection.js";
 import Navbar from "./Navbar.jsx";
 
 const allProjects = [
@@ -130,10 +131,13 @@ const allProjects = [
 
 export default function AllProjects() {
   const navigate = useNavigate();
+  // Utiliser notre hook personnalisé pour le défilement
+  useScrollToSection();
   
-  const handleReturnHome = () => {
-    window.location.href = window.location.origin;
-  };
+  // Faire défiler la page vers le haut au chargement du composant
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div className="min-h-screen">

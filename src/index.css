@@ -6,27 +6,35 @@
   .hero-title {
     @apply text-5xl md:text-7xl font-black text-white mb-6;
     text-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 0.6s ease-out;
+    will-change: transform, opacity;
   }
 
   .hero-subtitle {
     @apply text-xl md:text-2xl text-white/90 mb-8 font-light;
-    animation: fadeInUp 1s ease-out 0.2s backwards;
+    animation: fadeInUp 0.6s ease-out 0.1s forwards;
+    will-change: transform, opacity;
+    opacity: 0;
   }
 
   .hero-button-container {
     @apply flex flex-col sm:flex-row gap-4 justify-center mb-12;
-    animation: fadeInUp 1s ease-out 0.4s backwards;
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+    will-change: transform, opacity;
+    opacity: 0;
   }
 
   .hero-quote {
     @apply text-white/80 text-lg leading-relaxed;
-    animation: fadeInUp 1s ease-out 0.6s backwards;
+    animation: fadeInUp 0.6s ease-out 0.3s forwards;
+    will-change: transform, opacity;
+    opacity: 0;
   }
 
   .section-container {
     @apply max-w-4xl mx-auto px-4 py-16;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 0.6s ease-out;
+    will-change: opacity;
   }
 }
 
@@ -83,19 +91,15 @@ body::before {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06), 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Removed backdrop-filter and simplified transition */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.2),
-    0 8px 16px 0 rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-}
+/* Suppression de l'effet hover sur glass-card */
 
 .btn-primary {
   @apply bg-yellow-400 text-black font-bold px-8 py-4 shadow-md hover:bg-yellow-500 transition-all duration-300 transform hover:-translate-y-1;
@@ -246,7 +250,7 @@ body::before {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -290,7 +294,7 @@ body::before {
 /* Boston Dynamics inspired navigation */
 .nav-glass {
   background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
+  /* Removed backdrop-filter for better performance */
   border-bottom: 1px solid rgba(255, 183, 0, 0.1);
 }
 
@@ -392,16 +396,17 @@ body::before {
 
 /* Projects Section */
 .project-card {
-  @apply glass-card p-6 transition-all duration-500;
-  animation: fadeInUp 1s ease-out backwards;
+  @apply glass-card p-6 transition-transform duration-300;
+  will-change: transform;
+  animation: fadeInUp 0.5s ease-out backwards;
 }
 
 .project-card:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .project-card:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 /* Skills Section */
