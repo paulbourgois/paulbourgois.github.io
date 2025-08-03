@@ -2,18 +2,16 @@
   "name": "paulbourgois.github.io",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "description": "Portfolio de Paul Bourgois, ingénieur en robotique.",
   "main": "src/main.jsx",
-  "homepage": "https://paulbourgois.github.io",
+  "homepage": "https://paulbourgois.github.io/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production",
-    "build:analyze": "vite build --mode production --analyze",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --no-history --dotfiles -b main",
-    "deploy:script": "node deploy.cjs"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
