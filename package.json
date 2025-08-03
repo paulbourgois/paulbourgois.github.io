@@ -12,7 +12,7 @@
     "build:analyze": "vite build --mode production --analyze",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --no-history --dotfiles",
+    "deploy": "gh-pages -d dist --no-history --dotfiles -b main",
     "deploy:script": "node deploy.cjs"
   },
   "dependencies": {
