@@ -8,125 +8,137 @@ import Navbar from "./Navbar.jsx";
 const allProjects = [
   // Projets principaux
   {
-    title: "Drone roulant sur les murs",
-    date: "2024",
+    title: "Responsable projet au club tech",
+    date: "2024-2025",
     location: "CentraleSupélec",
-    desc: "Conception d'un drone hybride capable de rouler sur les murs grâce à un système d'adhérence innovant. Intégration de capteurs et développement d'algorithmes de contrôle adaptatifs.",
-    tech: ["ROS2", "Python", "SLAM", "Conception mécanique"],
-    media: "/src/assets/drone-mur.png",
-    github: "https://github.com/paulbourgois/wall-drone",
-    main: true
+    desc: "Gestion et coordination d'une équipe de 15 étudiants pour la réalisation de projets robotiques innovants, avec planification, suivi et validation des résultats.",
+    tech: ["Gestion", "Leadership", "Communication", "Organisation", "Suivi", "Validation", "Formation", "Documentation"],
+    media: "/src/assets/club-tech.png",
+    // github: "https://github.com/paulbourgois/tech-club-projects",
+    video: "https://www.youtube.com/watch?v=video1",
+    main: false
   },
   {
-    title: "Bras robotique 4 axes Pick & Place",
+    title: "Drone roulant sur les murs",
     date: "2023",
+    location: "Collège Stanislas",
+    desc: "Conception d'un drone hybride capable de rouler sur les murs grâce à un système d'adhérence innovant. Intégration de capteurs et développement d'algorithmes de contrôle adaptatifs.",
+    tech: ["Mécanique", "Électronique", "Contrôle", "Capteurs", "Stabilisation", "Tests", "Sécurité", "PID"],
+    media: "/drone_roulant.png",
+    // github: "https://github.com/paulbourgois/wall-drone"
+    video: "https://www.youtube.com/watch?v=video2",
+  },
+  {
+    title: "Bras 4 axes: Pick & Place",
+    date: "2025",
     location: "CentraleSupélec",
     desc: "Développement complet d'un bras robotique 4 axes: cinématique inverse, génération de trajectoire, contrôleur, fusion de capteurs et simulation Mujoco pour un contrôle basé sur le modèle dynamique.",
-    tech: ["MATLAB", "Mujoco", "Contrôle", "Fusion capteurs"],
-    media: "/src/assets/robotarm.png",
-    github: "https://github.com/paulbourgois/robot-arm",
-    main: true
+    tech: ["Dynamique & Cinématique", "Trajectoire", "Contrôle", "Simulation", "Fusion capteurs", "MATLAB & Simulink"],
+    media: "/bras_robot_4_axes.png",
+    // github: "https://github.com/paulbourgois/robot-arm"
+    video: "https://www.youtube.com/watch?v=video3",
   },
   {
     title: "ML pipeline pour analyse satellite",
     date: "2023",
     location: "Projet académique",
     desc: "Développement d'un pipeline d'apprentissage automatique pour détecter les états de construction des bâtiments à partir d'images satellite, avec une précision de 94%.",
-    tech: ["Python", "TensorFlow", "Computer Vision", "GIS"],
-    media: "/src/assets/ml-satellite.png", 
-    github: "https://github.com/paulbourgois/satellite-ml",
-    main: true
+    tech: ["Python", "Features Engineering", "Modélisation", "Évaluation", "Optimisation", "TensorFlow"],
+    media: "/ML_building.jpg",
+    // github: "https://github.com/paulbourgois/satellite-ml"
+    video: "https://www.youtube.com/watch?v=video4",
   },
   {
     title: "Simulation de marche bipède",
-    date: "2022",
-    location: "Laboratoire de recherche",
+    date: "2024",
+    location: "CentraleSupélec",
     desc: "Modélisation et contrôle d'un robot bipède dans le simulateur Mujoco. Conception d'une loi de commande basée sur l'énergie pour une marche stable et efficiente.",
-    tech: ["Python", "Mujoco", "Dynamique", "Contrôle optimal"],
-    media: "/src/assets/bipede.png",
-    github: "https://github.com/paulbourgois/bipede-simulation",
-    main: true
+    tech: ["Modélisation", "Commande", "Mujoco", "Optimisation", "Python"],
+    media: "/simu_mujoco.png",
+    // github: "https://github.com/paulbourgois/bipede-simulation"
+    video: "https://www.youtube.com/watch?v=video5",
+  },
+  {
+    title: "Hackaton Exolegend",
+    date: "2025",
+    location: "Lyon",
+    desc: "Compétition dédié aux étudiants et ingénieur, organisé par Exotec. L'objectif est de développer des algorithmes de navigation et d'attaque/défense dans un labyrinthe remplie de défis où il faut survivre à son rétrécissement et à l'adversaire.",
+    tech: ["C++", "Navigation", "Compétition", "Résultat : 4e des poules"],
+    media: "/hackaton.png",
+    // github: "https://github.com/paulbourgois/robotics-cup-pcb"
+    // Pas de vidéo pour ce projet
+  },
+  {
+    title: "PCB design: Coupe de France de Robotique",
+    date: "2023",
+    location: "ClubTech CentraleSupélec",
+    desc: "Conception et fabrication de cartes électroniques pour le robot participant à la Coupe de France de Robotique, incluant les systèmes de contrôle, puissance et communication.",
+  tech: ["EasyEDA", "Composants", "Prototypage", "Soudure"],
+    media: "/pcb_coupe_de_france_de_robotique.png",
+    // github: "https://github.com/paulbourgois/robotics-cup-pcb"
   },
   
   // Projets secondaires
   {
     title: "Robot suiveur de personne",
-    date: "2023",
+    date: "2024",
     location: "Projet personnel",
     desc: "Conception d'un robot autonome capable de suivre une personne en temps réel en utilisant des techniques de vision par ordinateur et des capteurs de proximité.",
-    tech: ["Arduino", "Raspberry Pi", "OpenCV", "Électronique"],
-    media: "/src/assets/robot-suiveur.png",
-    github: "https://github.com/paulbourgois/person-follower-robot",
+    tech: ["Arduino", "Raspberry Pi", "OpenCV", "Électronique", "Management", "Gestion d'obstacle"],
+    media: "/robot_follower.png",
+    // github: "https://github.com/paulbourgois/person-follower-robot",
     main: false
   },
   {
     title: "Robot suiveur de ligne",
-    date: "2022",
+    date: "2024",
     location: "CentraleSupélec",
     desc: "Développement d'un robot capable de suivre une ligne avec précision en utilisant des capteurs IR et un algorithme PID optimisé pour une navigation fluide.",
-    tech: ["Arduino", "PID", "Capteurs", "Navigation"],
+    tech: ["Arduino", "Raspberry Pi", "Capteurs", "Navigation", "OpenCV"],
     media: "/src/assets/line-follower.png",
-    github: "https://github.com/paulbourgois/line-follower-robot",
-    main: false
-  },
-  {
-    title: "Asservissement bras exosquelettes",
-    date: "2023",
-    location: "Laboratoire biomécanique",
-    desc: "Génération de loi de commande et contrôleur pour l'asservissement précis d'un bras exosquelette, permettant une assistance naturelle au mouvement humain.",
-    tech: ["Matlab", "Simulink", "Contrôle", "Biomécanique"],
-    media: "/src/assets/exosquelette.png",
-    github: "https://github.com/paulbourgois/exo-arm-control",
-    main: false
-  },
-  {
-    title: "PCB pour Coupe de France de Robotique",
-    date: "2023-2024",
-    location: "Club robotique",
-    desc: "Conception et fabrication de cartes électroniques pour le robot participant à la Coupe de France de Robotique, incluant les systèmes de contrôle, puissance et communication.",
-    tech: ["KiCad", "Altium", "Électronique", "Microcontrôleurs"],
-    media: "/src/assets/pcb-coupe.png",
-    github: "https://github.com/paulbourgois/robotics-cup-pcb",
+    // github: "https://github.com/paulbourgois/line-follower-robot",
     main: false
   },
   {
     title: "Contrôle d'une flotte robotique",
-    date: "2022",
+    date: "2025",
     location: "Projet de recherche",
     desc: "Développement d'algorithmes pour la coordination d'une flotte de robots mobiles autonomes dans un environnement dynamique avec évitement d'obstacles.",
-    tech: ["ROS", "Python", "Navigation", "Multi-agent"],
-    media: "/src/assets/flotte-robotique.png",
-    github: "https://github.com/paulbourgois/robot-fleet-control",
+    tech: ["Contrôle en flotte", "Python", "Simulation", "Multi-agent"],
+    media: "/flotte_drone.png",
+    // github: "https://github.com/paulbourgois/robot-fleet-control",
+    video: "https://youtu.be/K5wdbUqg6o0",
     main: false
   },
-  {
-    title: "Responsable projet au club tech",
-    date: "2022-2024",
-    location: "CentraleSupélec",
-    desc: "Gestion et coordination d'une équipe de 15 étudiants pour la réalisation de projets robotiques innovants, avec planification, suivi et présentation des résultats.",
-    tech: ["Gestion de projet", "Leadership", "Robotique", "Communication"],
-    media: "/src/assets/club-tech.png",
-    github: "https://github.com/paulbourgois/tech-club-projects",
-    main: false
-  },
-  {
-    title: "TSMQ",
-    date: "2023",
-    location: "Projet académique",
-    desc: "Implémentation et optimisation d'un algorithme Tree-Structured Monte Carlo Quantization pour la compression efficace de modèles d'apprentissage profond.",
-    tech: ["Python", "PyTorch", "Quantization", "Deep Learning"],
-    media: "/src/assets/tsmq.png",
-    github: "https://github.com/paulbourgois/tsmq-implementation",
-    main: false
-  },
+  // {
+  //   title: "TSMQ",
+  //   date: "2023",
+  //   location: "Projet académique",
+  //   desc: "Implémentation et optimisation d'un algorithme Tree-Structured Monte Carlo Quantization pour la compression efficace de modèles d'apprentissage profond.",
+  //   tech: ["Python", "PyTorch", "Quantization", "Deep Learning"],
+  //   media: "/src/assets/tsmq.png",
+  //   github: "https://github.com/paulbourgois/tsmq-implementation",
+  //   main: false
+  // },
   {
     title: "Auto-SLAM",
-    date: "2024",
+    date: "2025",
     location: "Projet de recherche",
     desc: "Développement d'un système SLAM (Simultaneous Localization and Mapping) autonome utilisant des techniques d'apprentissage par renforcement pour optimiser la cartographie.",
-    tech: ["Python", "ROS", "Reinforcement Learning", "Computer Vision"],
+    tech: ["Python & C++", "ROS2", "SLAM", "Computer Vision"],
     media: "/src/assets/auto-slam.png",
     github: "https://github.com/paulbourgois/auto-slam",
+    main: false
+  },
+  {
+    title: "IoT pour la robotique",
+    date: "2024",
+    location: "Projet de recherche",
+    desc: "Développement d'algorithmes de navigation sur un turtlebot 3, en utilisant le framework Zenoh pour la communication IoT. Tout cela mis en place sur ROS2.",
+    tech: ["Python", "ROS2", "Zenoh", "IoT", "Navigation"],
+    media: "/turtlebot.png",
+    // github: "https://github.com/paulbourgois/iot-robotics",
+    video : "https://youtu.be/1pFlS0Vp21k",
     main: false
   }
 ];
@@ -220,12 +232,11 @@ export default function AllProjects() {
         </p>
       </div>
       
-      <div className="max-w-5xl mx-auto px-4 py-12">
+  <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="mb-8">
           <button 
             className="btn-primary inline-flex items-center gap-2 py-2 px-4 rounded bg-yellow-500 text-black hover:bg-yellow-600 transition-colors cursor-pointer"
             onClick={() => {
-              // Navigation directe et forcée vers la page d'accueil
               window.open(`${window.location.origin}/`, "_self");
             }}
           >
@@ -235,39 +246,29 @@ export default function AllProjects() {
             <span className="font-mono tracking-wider">RETOUR À L'ACCUEIL</span>
           </button>
         </div>
-        
-        <h2 className="section-title mb-8">Projets Principaux</h2>
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
-          {allProjects.filter(p => p.main).map((p, i) => (
-            <div key={i} className="card flex flex-col items-center relative z-10 bg-white p-4 rounded shadow-sm border border-gray-100">
-              <img src={p.media} className="w-full h-40 object-cover rounded mb-3" />
-              <h3 className="font-bold text-lg mb-1">{p.title}</h3>
+        <h2 className="section-title mb-8">Tous les projets</h2>
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          {allProjects.map((p, i) => (
+            <div key={i} className="card flex flex-col items-center relative z-10 bg-white p-6 rounded shadow-md border border-gray-100 w-full h-full">
+              <img src={p.media} className="w-full h-40 object-cover rounded mb-4" />
+              <h3 className="font-bold text-xl mb-2 text-center">{p.title}</h3>
               <div className="text-xs text-gray-500 mb-2">{p.date} – {p.location}</div>
-              <div className="mb-2 text-center text-sm">{p.desc}</div>
-              <div className="flex flex-wrap gap-2 mb-2">
+              <div className="mb-3 text-sm text-gray-700 text-justify">{p.desc}</div>
+              <div className="flex flex-wrap gap-2 mb-3 justify-center">
                 {p.tech.map((t, j) => (
                   <span key={j} className="bg-gray-100 text-xs px-2 py-1 rounded">{t}</span>
                 ))}
               </div>
-              <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-yellow-500 font-bold hover:underline relative z-20">GitHub</a>
-            </div>
-          ))}
-        </div>
-        
-        <h2 className="section-title mb-8">Autres Projets</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {allProjects.filter(p => !p.main).map((p, i) => (
-            <div key={i} className="card flex flex-col items-center relative z-10 bg-white p-4 rounded shadow-sm border border-gray-100">
-              <img src={p.media} className="w-full h-32 object-cover rounded mb-3" />
-              <h3 className="font-bold text-lg mb-1">{p.title}</h3>
-              <div className="text-xs text-gray-500 mb-2">{p.date} – {p.location}</div>
-              <div className="mb-2 text-center text-xs">{p.desc}</div>
-              <div className="flex flex-wrap gap-1 mb-2">
-                {p.tech.map((t, j) => (
-                  <span key={j} className="bg-gray-100 text-xs px-1.5 py-0.5 rounded">{t}</span>
-                ))}
-              </div>
-              <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-yellow-500 font-bold hover:underline relative z-20">GitHub</a>
+              {(p.github || p.video) && (
+                <div className="flex gap-2 mt-2">
+                  {p.github && (
+                    <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-yellow-500 font-bold hover:underline relative z-20">GitHub</a>
+                  )}
+                  {p.video && (
+                    <a href={p.video} target="_blank" rel="noopener noreferrer" className="text-blue-500 font-bold hover:underline relative z-20">Vidéo</a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

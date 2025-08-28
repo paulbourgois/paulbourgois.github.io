@@ -7,24 +7,24 @@ function Videos() {
   const videos = [
     {
       id: 1,
-      title: "Robot Autonomy Demo",
-      description: "A demonstration of autonomous navigation in industrial environments",
-      thumbnail: "https://via.placeholder.com/500x280?text=Robot+Demo",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      title: "Hackaton : Exolegend",
+      description: "Résultat de nos algorithmes de navigation et d'attaque/défense dans un labyrinthe.",
+      thumbnail: "/hackaton_studio.png",
+      videoUrl: "https://youtu.be/HSmmnKxPebI",
     },
     {
       id: 2,
-      title: "Robotic Arm Precision",
-      description: "High-precision robotic arm control for manufacturing applications",
-      thumbnail: "https://via.placeholder.com/500x280?text=Robotic+Arm",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      title: "Bras 4 axes: Pick & Place",
+      description: "Démonstration Pick & Place",
+      thumbnail: "/bras_robot_4_axes.png",
+      videoUrl: "https://youtu.be/mtQlz-cu4vM",
     },
     {
       id: 3,
-      title: "Mobility Research",
-      description: "Advanced quadruped mobility across challenging terrain",
-      thumbnail: "https://via.placeholder.com/500x280?text=Mobility+Research",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      title: "Simulation marche bipède",
+      description: "Simulation d'une marche bipède dont la commande est basé sur la minimisation de l'énergie dépensée",
+      thumbnail: "/simu_mujoco.png",
+      videoUrl: "https://youtu.be/cXNZm2OqueM",
     },
   ];
 

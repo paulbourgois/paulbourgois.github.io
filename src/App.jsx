@@ -21,8 +21,8 @@ function HomePage() {
       <main className="max-w-5xl mx-auto relative z-10">
         <Hero />
         <div id="about"><About /></div>
-        <div id="skills"><Skills /></div>
         <div id="projects"><Projects /></div>
+        <div id="skills"><Skills /></div>
         <div id="videos"><Videos /></div>
         <div id="contact"><Contact /></div>
       </main>

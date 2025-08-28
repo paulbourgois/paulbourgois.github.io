@@ -12,12 +12,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="glass-card p-8">
-      <h2 className="section-title">Compétences Techniques</h2>
-      
-      <div className="font-mono text-xs text-yellow-500/80 mb-6 tracking-widest">
-        SYSTEM CAPABILITIES
-      </div>
-      
+      <h2 className="section-title">Compétences Techniques</h2>      
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {skills.map((s, i) => (
           <div key={i} className="relative">

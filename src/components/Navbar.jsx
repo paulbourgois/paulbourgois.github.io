@@ -42,11 +42,11 @@ function Navbar() {
             <NavLink to="/#about" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               À PROPOS
             </NavLink>
-            <NavLink to="/#skills" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
-              COMPÉTENCES
-            </NavLink>
             <NavLink to="/#projects" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               PROJETS
+            </NavLink>
+            <NavLink to="/#skills" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
+              COMPÉTENCES
             </NavLink>
             <NavLink to="/#videos" className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors">
               VIDÉOS
@@ -82,18 +82,18 @@ function Navbar() {
               À PROPOS
             </NavLink>
             <NavLink 
-              to="/#skills" 
-              className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              COMPÉTENCES
-            </NavLink>
-            <NavLink 
               to="/#projects" 
               className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               PROJETS
+            </NavLink>
+            <NavLink 
+              to="/#skills" 
+              className="font-mono text-sm text-black/80 hover:text-yellow-500 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              COMPÉTENCES
             </NavLink>
             <NavLink 
               to="/#videos" 
