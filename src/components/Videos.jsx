@@ -22,21 +22,21 @@ function Videos() {
     {
       id: 3,
       title: "Simulation marche bipède",
-      description: "Simulation d'une marche bipède dont la commande est basé sur la minimisation de l'énergie dépensée",
+      description: "Simulation d'une marche bipède dont la commande est basée sur la minimisation de l'énergie dépensée",
       thumbnail: "/simu_mujoco.png",
       videoUrl: "https://youtu.be/cXNZm2OqueM",
     },
   ];
 
   return (
-    <section 
-      id="videos" 
+    <section
+      id="videos"
       className="py-20 relative overflow-hidden"
       ref={ref}
     >
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid-black/[0.03] bg-[length:20px_20px]"></div>
-      
+
       {/* Technical blueprint lines */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-black/10"></div>
       <div className="absolute top-0 right-0 w-[1px] h-full bg-black/10"></div>
@@ -58,8 +58,8 @@ function Videos() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {videos.map((video) => (
-              <div 
-                key={video.id} 
+              <div
+                key={video.id}
                 className={`bg-white border border-black/10 group transition-all hover:border-yellow-500 relative ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ transitionDelay: `${150 * video.id}ms` }}
               >
@@ -72,15 +72,15 @@ function Videos() {
                 <div className="absolute bottom-0 left-0 w-[1px] h-3 bg-yellow-500"></div>
                 <div className="absolute bottom-0 right-0 w-3 h-[1px] bg-yellow-500"></div>
                 <div className="absolute bottom-0 right-0 w-[1px] h-3 bg-yellow-500"></div>
-                
+
                 <div className="relative">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title} 
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
                     className="w-full h-48 object-cover"
                   />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button 
+                    <button
                       className="bg-yellow-500 text-black px-4 py-2 font-mono text-sm tracking-wider flex items-center gap-2 hover:bg-yellow-400 transition-colors"
                       onClick={() => window.open(video.videoUrl, '_blank')}
                     >
@@ -91,7 +91,7 @@ function Videos() {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="p-4">
                   <h3 className="text-lg font-bold mb-2 font-mono">{video.title}</h3>
                   <p className="text-black/70 text-sm">{video.description}</p>

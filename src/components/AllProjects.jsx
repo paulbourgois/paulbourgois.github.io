@@ -32,7 +32,7 @@ const allProjects = [
     title: "Bras 4 axes: Pick & Place",
     date: "2025",
     location: "CentraleSupélec",
-    desc: "Développement complet d'un bras robotique 4 axes: cinématique inverse, génération de trajectoire, contrôleur, fusion de capteurs et simulation Mujoco pour un contrôle basé sur le modèle dynamique.",
+    desc: "Développement complet d'un bras robotique 4 axes: cinématique inverse, génération de trajectoire, contrôleur, fusion de capteurs et simulation Mujoco pour un contrôle basée sur le modèle dynamique.",
     tech: ["Dynamique & Cinématique", "Trajectoire", "Contrôle", "Simulation", "Fusion capteurs", "MATLAB & Simulink"],
     media: "/bras_robot_4_axes.png",
     // github: "https://github.com/paulbourgois/robot-arm"
@@ -52,7 +52,7 @@ const allProjects = [
     title: "Simulation de marche bipède",
     date: "2024",
     location: "CentraleSupélec",
-    desc: "Modélisation et contrôle d'un robot bipède dans le simulateur Mujoco. Conception d'une loi de commande basée sur l'énergie pour une marche stable et efficiente.",
+    desc: "Modélisation et contrôle d'un robot bipède dans le simulateur Mujoco. Conception d'une loi de commande basée sur l'énergie pour une marche stable et efficace.",
     tech: ["Modélisation", "Commande", "Mujoco", "Optimisation", "Python"],
     media: "/simu_mujoco.png",
     // github: "https://github.com/paulbourgois/bipede-simulation"
@@ -62,7 +62,7 @@ const allProjects = [
     title: "Hackaton Exolegend",
     date: "2025",
     location: "Lyon",
-    desc: "Compétition dédié aux étudiants et ingénieur, organisé par Exotec. L'objectif est de développer des algorithmes de navigation et d'attaque/défense dans un labyrinthe remplie de défis où il faut survivre à son rétrécissement et à l'adversaire.",
+    desc: "Compétition dédiée aux étudiants et ingénieurs, organisée par Exotec. L'objectif est de développer des algorithmes de navigation et d'attaque/défense dans un labyrinthe rempli de défis où il faut survivre à son rétrécissement et à l'adversaire.",
     tech: ["C++", "Navigation", "Compétition", "Résultat : 4e des poules"],
     media: "/hackaton.png",
     // github: "https://github.com/paulbourgois/robotics-cup-pcb"
@@ -77,14 +77,14 @@ const allProjects = [
     media: "/pcb_coupe_de_france_de_robotique.png",
     // github: "https://github.com/paulbourgois/robotics-cup-pcb"
   },
-  
+
   // Projets secondaires
   {
     title: "Robot suiveur de personne",
     date: "2024",
     location: "Projet personnel",
     desc: "Conception d'un robot autonome capable de suivre une personne en temps réel en utilisant des techniques de vision par ordinateur et des capteurs de proximité.",
-    tech: ["Arduino", "Raspberry Pi", "OpenCV", "Électronique", "Management", "Gestion d'obstacle"],
+    tech: ["Arduino", "Raspberry Pi", "OpenCV", "Électronique", "Management", "Gestion d'obstacles"],
     media: "/robot_follower.png",
     // github: "https://github.com/paulbourgois/person-follower-robot",
     main: false
@@ -145,13 +145,13 @@ const allProjects = [
 
 export default function AllProjects() {
   const navigate = useNavigate();
-  
+
   // Utiliser notre hook de reset de scroll
   useScrollReset();
-  
+
   // Solution combinée pour forcer le scroll au début
   const [isFixed, setIsFixed] = React.useState(true);
-  
+
   React.useEffect(() => {
     // Fonction pour forcer le scroll haut avec toutes les méthodes connues
     const forceScrollTop = () => {
@@ -159,7 +159,7 @@ export default function AllProjects() {
       window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
-      
+
       // Utiliser requestAnimationFrame pour assurer que le scroll
       // se produit après les calculs de mise en page
       requestAnimationFrame(() => {
@@ -168,7 +168,7 @@ export default function AllProjects() {
         document.body.scrollTop = 0;
       });
     };
-    
+
     // Injecter un script qui s'exécute immédiatement
     const script = document.createElement('script');
     script.textContent = `
@@ -178,15 +178,15 @@ export default function AllProjects() {
       document.body.scrollTop = 0;
     `;
     document.head.appendChild(script);
-    
+
     // Forcer le scroll au départ
     forceScrollTop();
-    
+
     // Nettoyer le flag de session s'il existe
     if (sessionStorage.getItem('scrollToTop') === 'true') {
       sessionStorage.removeItem('scrollToTop');
     }
-    
+
     // Utiliser plusieurs appels avec délai pour garantir le scroll top
     const timers = [
       setTimeout(forceScrollTop, 0),
@@ -199,7 +199,7 @@ export default function AllProjects() {
       // Un dernier appel pour être sûr
       setTimeout(forceScrollTop, 300)
     ];
-    
+
     // Nettoyage des timers et du script
     return () => {
       timers.forEach(clearTimeout);
@@ -208,22 +208,22 @@ export default function AllProjects() {
       }
     };
   }, []);
-  
+
   // Si on vient d'un clic sur "Voir tous les projets", on affiche d'abord une version fixe
-  const pageStyle = isFixed ? { 
-    position: 'fixed', 
-    top: 0, 
-    left: 0, 
+  const pageStyle = isFixed ? {
+    position: 'fixed',
+    top: 0,
+    left: 0,
     width: '100%',
     height: '100%',
     overflow: 'hidden'
   } : {};
-  
+
   return (
     <div className="min-h-screen" style={pageStyle}>
       {/* Ancre invisible avec id pour les liens d'ancrage */}
       <div id="top" style={{ height: 0, width: 0, position: 'absolute', top: 0 }}></div>
-      
+
       <Navbar />
       <div className="hero-gradient py-20 flex flex-col items-center justify-center relative">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">Tous mes projets</h1>
@@ -231,10 +231,10 @@ export default function AllProjects() {
           Explorer l'ensemble de mes projets en robotique, intelligence artificielle et systèmes embarqués
         </p>
       </div>
-      
+
   <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="mb-8">
-          <button 
+          <button
             className="btn-primary inline-flex items-center gap-2 py-2 px-4 rounded bg-yellow-500 text-black hover:bg-yellow-600 transition-colors cursor-pointer"
             onClick={() => {
               window.open(`${window.location.origin}/`, "_self");

@@ -3,9 +3,19 @@ import { Link } from "react-router-dom";
 
 const mainProjects = [
   {
+    title: "Responsable Navigation",
+    date: "2025-2026",
+    location: "Association Xplore - EPFL",
+    // responsable navigation pour la compétition Europpean Rover Challenge (ERC)
+    desc: "Développement et implémentation d'algorithmes de navigation autonome pour un rover martien, incluant la planification de trajectoire, l'évitement d'obstacles et la localisation en environnement inconnu.",
+    tech: ["ROS2", "C++", "Python", "SLAM", "Path Planning", "Obstacle Avoidance", "Capteurs", "Simulation Gazebo"],
+    media: "/xplore_rover.jpg",
+    // github:
+  },
+  {
     title: "Responsable projets",
-    date: "2022-2024",
-    location: "ClubTech CentraleSupélec",
+    date: "2023-2024",
+    location: "ClubTech - CentraleSupélec",
     desc: "Gestion et coordination d'une équipe de 15 étudiants pour la réalisation de projets robotiques innovants, avec planification, suivi et validation des résultats.",
     tech: ["Gestion", "Leadership", "Communication", "Organisation", "Suivi", "Validation", "Formation", "Documentation"],
     media: "/respo_projets_ct.jpg",
@@ -13,31 +23,21 @@ const mainProjects = [
     // video: "https://www.youtube.com/watch?v=video1",
   },
   {
-    title: "Drone roulant sur les murs",
-    date: "2023",
-    location: "Collège Stanislas",
-    desc: "Conception d'un drone hybride capable de rouler sur les murs grâce à un système d'adhérence innovant. Intégration de capteurs et développement d'algorithmes de contrôle adaptatifs.",
-    tech: ["Mécanique", "Électronique", "Contrôle", "Capteurs", "Stabilisation", "Tests", "Sécurité", "PID"],
-    media: "/drone_roulant.png",
-    // github: "https://github.com/paulbourgois/wall-drone"
-    // video: "https://www.youtube.com/watch?v=video2",
-  },
-  {
     title: "Bras 4 axes: Pick & Place",
     date: "2025",
     location: "CentraleSupélec",
-    desc: "Développement complet d'un bras robotique 4 axes: cinématique inverse, génération de trajectoire, contrôleur, fusion de capteurs et simulation Mujoco pour un contrôle basé sur le modèle dynamique.",
+    desc: "Développement complet d'un bras robotique 4 axes: cinématique inverse, génération de trajectoire, contrôleur, fusion de capteurs et simulation Mujoco pour un contrôle basée sur le modèle dynamique.",
     tech: ["Dynamique & Cinématique", "Trajectoire", "Contrôle", "Simulation", "Fusion capteurs", "MATLAB & Simulink"],
     media: "/bras_robot_4_axes.png",
     // github: "https://github.com/paulbourgois/robot-arm"
     video: "https://youtu.be/mtQlz-cu4vM",
   },
   {
-    title: "ML pipeline pour analyse satellite",
-    date: "2024",
-    location: "CentraleSupélec",
-    desc: "Développement d'un pipeline d'apprentissage automatique pour détecter les états de construction des bâtiments à partir d'images satellite, avec une précision de 94%.",
-    tech: ["Features Engineering", "Modélisation", "Évaluation", "Optimisation", "TensorFlow"],
+    title: "Conception capteur de Force",
+    date: "2025",
+    location: "EPFL",
+    desc: "Développement d'un pipeline de machine learning pour mesurer la force, l'humidité et la température à partir de la technologie de capteurs EIT (Electrical Impedance Tomography).",
+    tech: ["Machine Learning", "Modélisation", "Évaluation", "Optimisation", "Python", "PyTorch", "MATLAB"],
     media: "/ML_building.jpg",
     // github: "https://github.com/paulbourgois/satellite-ml"
     // video: "https://www.youtube.com/watch?v=video4",
@@ -46,7 +46,7 @@ const mainProjects = [
     title: "Simulation de marche bipède",
     date: "2024",
     location: "CentraleSupélec",
-    desc: "Modélisation et contrôle d'un robot bipède dans le simulateur Mujoco. Conception d'une loi de commande basée sur l'énergie pour une marche stable et efficiente.",
+    desc: "Modélisation et contrôle d'un robot bipède dans le simulateur Mujoco. Conception d'une loi de commande basée sur l'énergie pour une marche stable et efficace.",
     tech: ["Modélisation", "Commande", "Mujoco", "Optimisation", "Python"],
     media: "/simu_mujoco.png",
     // github: "https://github.com/paulbourgois/bipede-simulation"
@@ -56,7 +56,7 @@ const mainProjects = [
     title: "Hackaton Exolegend",
     date: "2025",
     location: "Lyon",
-    desc: "Compétition de 50 équipes dédiée aux étudiants et ingénieurs, organisée par Exotec. L'objectif est de développer des algorithmes de navigation et d'attaque/défense dans un labyrinthe remplie de défis où il faut survivre à son rétrécissement et à l'adversaire.",
+    desc: "Compétition de 50 équipes dédiée aux étudiants et ingénieurs, organisée par Exotec. L'objectif est de développer des algorithmes de navigation et d'attaque/défense dans un labyrinthe rempli de défis où il faut survivre à son rétrécissement et à l'adversaire.",
     tech: ["C++", "Navigation", "Compétition", "Résultat : 4e des poules et 8e de finale"],
     media: "/hackaton_studio.png",
     // github: "https://github.com/paulbourgois/robotics-cup-pcb",
@@ -94,7 +94,7 @@ export default function Projects() {
         ))}
       </div>
       <div className="text-center mt-8">
-        <a 
+        <a
           href="/#/all-projects?top=true"
           className="btn-primary inline-flex items-center gap-2 py-2 px-4 rounded bg-yellow-500 text-black hover:bg-yellow-600 transition-colors cursor-pointer"
           onClick={(e) => {
