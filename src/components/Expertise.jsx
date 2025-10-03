@@ -112,8 +112,8 @@ export default function Expertise() {
             <div className="text-sm text-gray-600">Projets complets</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-700">2</div>
-            <div className="text-sm text-gray-600">Années d'expérience</div>
+            <div className="text-3xl font-bold text-blue-700">4</div>
+            <div className="text-sm text-gray-600">Années de formation</div>
           </div>
         </div>
       </div>

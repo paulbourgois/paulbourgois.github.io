@@ -60,12 +60,26 @@ export default function About() {
                 <h4 className="font-bold text-blue-700">CentraleSupélec</h4>
                 <p className="text-xs text-gray-600">2023-2027</p>
               </div>
-              <div className="relative h-32 flex items-center">
-                {/* Ligne verticale longue */}
-                <div className="absolute left-[11px] top-0 bottom-0 w-1 bg-blue-700"></div>
-                
-                <div className="flex gap-4 items-center relative ml-8">
-                  <div className="text-sm font-semibold text-black">Cycle ingénieur</div>
+              <div className="space-y-4 relative">
+                {/* Ligne verticale */}
+                <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-blue-700/30"></div>
+
+                <div className="flex gap-4 relative">
+                  <div className="w-6 h-6 bg-blue-700 rounded-full border-4 border-white z-10 flex-shrink-0"></div>
+                  <div className="flex-1 pt-0.5">
+                    <div className="text-xs font-bold text-orange-600">2023-2027</div>
+                    <div className="text-sm font-semibold text-black">Cycle ingénieur</div>
+                    <div className="text-xs text-gray-600">Spécialisation Robotique</div>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 relative">
+                  <div className="w-6 h-6 bg-gray-400 rounded-full border-4 border-white z-10 flex-shrink-0"></div>
+                  <div className="flex-1 pt-0.5">
+                    <div className="text-xs font-bold text-gray-500">2021-2023</div>
+                    <div className="text-sm font-semibold text-gray-700">Classes Préparatoires</div>
+                    <div className="text-xs text-gray-600">MPSI/PSI - Stanislas</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,7 +93,7 @@ export default function About() {
               <div className="space-y-4 relative">
                 {/* Ligne verticale */}
                 <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-orange-600/30"></div>
-                
+
                 <div className="flex gap-4 relative">
                   <div className="w-6 h-6 bg-orange-600 rounded-full border-4 border-white z-10 flex-shrink-0"></div>
                   <div className="flex-1 pt-0.5">
