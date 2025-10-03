@@ -62,12 +62,12 @@ body::before {
   background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(255, 215, 0, 0.01) 50%,
+      rgba(249, 115, 22, 0.01) 50%,
       transparent 100%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(255, 215, 0, 0.03) 0%,
+      rgba(249, 115, 22, 0.03) 0%,
       transparent 40%
     );
   pointer-events: none;
@@ -102,8 +102,8 @@ body::before {
 /* Suppression de l'effet hover sur glass-card */
 
 .btn-primary {
-  @apply bg-yellow-400 text-black font-bold px-8 py-4 shadow-md hover:bg-yellow-500 transition-all duration-300 transform hover:-translate-y-1;
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.15);
+  @apply bg-orange-500 text-white font-bold px-8 py-4 shadow-md hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
   position: relative;
   isolation: isolate;
   border-radius: 0;
@@ -147,7 +147,7 @@ body::before {
   bottom: -0.5rem;
   width: 60px;
   height: 4px;
-  background: #ffd700;
+  background: #f97316;
 }
 
 .card-modern {
@@ -167,9 +167,9 @@ body::before {
 }
 
 .tag-modern {
-  @apply bg-black text-yellow-500 text-xs font-mono px-4 py-2 tracking-wider;
+  @apply bg-black text-orange-500 text-xs font-mono px-4 py-2 tracking-wider;
   position: relative;
-  border: 1px solid rgba(255, 183, 0, 0.3);
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
 .tag-modern::before {
@@ -179,12 +179,12 @@ body::before {
   left: 0;
   width: 2px;
   height: 100%;
-  background: #ffb700;
+  background: #f97316;
 }
 
 /* Technical measurements and labels */
 .tech-label {
-  @apply font-mono text-xs tracking-wider text-yellow-500/60;
+  @apply font-mono text-xs tracking-wider text-orange-500/60;
   position: relative;
 }
 
@@ -195,7 +195,7 @@ body::before {
   left: -20px;
   width: 15px;
   height: 1px;
-  background: #ffb700;
+  background: #f97316;
 }
 
 .robot-eye::after {
@@ -295,7 +295,7 @@ body::before {
 .nav-glass {
   background: rgba(10, 10, 10, 0.95);
   /* Removed backdrop-filter for better performance */
-  border-bottom: 1px solid rgba(255, 183, 0, 0.1);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.1);
 }
 
 /* Robot animations */
@@ -366,7 +366,7 @@ body::before {
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(255, 183, 0, 0.2),
+    rgba(249, 115, 22, 0.2),
     transparent
   );
 }
@@ -389,7 +389,7 @@ body::before {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 183, 0, 0.2),
+    rgba(249, 115, 22, 0.2),
     transparent
   );
 }

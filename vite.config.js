@@ -7,5 +7,8 @@ export default defineConfig({
   base: '/',
   server: {
     open: true
+  },
+  optimizeDeps: {
+    include: ['react-router-dom']
   }
 })
