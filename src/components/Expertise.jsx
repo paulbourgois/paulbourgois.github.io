@@ -5,22 +5,22 @@ export default function Expertise() {
     {
       icon: "�",
       title: "Contrôle & Modélisation",
-      description: "Modélisation dynamique, simulation physique et algorithmes de contrôle avancés pour systèmes robotiques",
-      technologies: ["MATLAB", "Simulink", "MuJoCo", "Gazebo", "PID", "Cinématique", "Dynamique"],
+      description: "Modélisation dynamique, simulation physique et algorithmes de contrôle avancés pour systèmes autonomes",
+      technologies: ["MATLAB / Simulink", "Optimisation", "MuJoCo / Gazebo", "PID", "Cinématique", "Dynamique"],
       color: "blue"
     },
     {
       icon: "🧠",
       title: "Intelligence Artificielle",
       description: "Machine Learning, Computer Vision et algorithmes d'apprentissage pour la perception et la décision",
-      technologies: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Deep Learning", "Scikit-learn"],
+      technologies: ["Python", "Reinforcement Learning", "TensorFlow", "PyTorch", "Deep Learning", "Scikit-learn"],
       color: "blue"
     },
     {
       icon: "⚡",
       title: "Systèmes Embarqués",
       description: "Développement bas niveau, fusion de capteurs, électronique et intégration matériel-logiciel temps réel",
-      technologies: ["C/C++", "ROS2", "Arduino", "ESP32", "Fusion capteurs", "PCB Design", "IoT"],
+      technologies: ["C/C++", "ROS2", "SLAM", "Kalman", "Arduino/ESP32/STM32/Jetson", "Fusion capteurs", "PCB Design", "IoT"],
       color: "blue"
     }
   ];
@@ -104,16 +104,16 @@ export default function Expertise() {
             <div className="text-sm text-gray-600">Technologies maîtrisées</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-700">4</div>
-            <div className="text-sm text-gray-600">Langages experts</div>
+            <div className="text-3xl font-bold text-blue-700">3</div>
+            <div className="text-sm text-gray-600">Domaines de spécialité</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-orange-600">6+</div>
             <div className="text-sm text-gray-600">Projets complets</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-700">4</div>
-            <div className="text-sm text-gray-600">Années de formation</div>
+            <div className="text-3xl font-bold text-blue-700">2</div>
+            <div className="text-sm text-gray-600">Écoles de formation</div>
           </div>
         </div>
       </div>
