@@ -206,24 +206,24 @@ export const allProjects = [
     github: null,
     video: "https://youtu.be/K5wdbUqg6o0"
   },
-  {
-    id: 12,
-    title: "Auto-SLAM",
-    date: "2025",
-    location: "Projet de recherche",
-    desc: "Développement d'un système SLAM (Simultaneous Localization and Mapping) autonome utilisant des techniques d'apprentissage par renforcement pour optimiser la cartographie et l'exploration.",
-    tech: ["Python", "C++", "ROS2", "SLAM", "Computer Vision", "Reinforcement Learning"],
-    category: ["SLAM", "ROS2", "Machine Learning"],
-    media: "/src/assets/auto-slam.png",
-    results: [
-      "Cartographie autonome d'environnements inconnus",
-      "Optimisation de trajectoire d'exploration",
-      "Précision de localisation < 5cm"
-    ],
-    isMain: false,
-    github: "https://github.com/paulbourgois/auto-slam",
-    video: null
-  },
+  // {
+  //   id: 12,
+  //   title: "Auto-SLAM",
+  //   date: "2025",
+  //   location: "Projet de recherche",
+  //   desc: "Développement d'un système SLAM (Simultaneous Localization and Mapping) autonome utilisant des techniques d'apprentissage par renforcement pour optimiser la cartographie et l'exploration.",
+  //   tech: ["Python", "C++", "ROS2", "SLAM", "Computer Vision", "Reinforcement Learning"],
+  //   category: ["SLAM", "ROS2", "Machine Learning"],
+  //   media: "/src/assets/auto-slam.png",
+  //   results: [
+  //     "Cartographie autonome d'environnements inconnus",
+  //     "Optimisation de trajectoire d'exploration",
+  //     "Précision de localisation < 5cm"
+  //   ],
+  //   isMain: false,
+  //   github: "https://github.com/paulbourgois/auto-slam",
+  //   video: null
+  // },
   {
     id: 13,
     title: "IoT pour la robotique",
