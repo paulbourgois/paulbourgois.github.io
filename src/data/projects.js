@@ -6,14 +6,14 @@ export const allProjects = [
     title: "Responsable Navigation",
     date: "2025-2026",
     location: "Association Xplore - EPFL",
-    desc: "Développement et implémentation d'algorithmes de navigation autonome pour un rover martien, incluant la planification de trajectoire, l'évitement d'obstacles et la localisation en environnement inconnu.",
-    tech: ["ROS2", "C++", "Python", "SLAM", "Path Planning", "Obstacle Avoidance", "Capteurs", "Simulation Gazebo"],
+    desc: "Responsable d'une équipe d'étudiants pour développer la navigation autonome d'un rover martien pour la compétition European Rover Challenge 2026.",
+    tech: ["ROS2", "C++", "Python", "SLAM", "GLIM", "Path Planning", "Obstacle Avoidance", "Capteurs", "Simulation Gazebo"],
     category: ["Navigation", "ROS2", "SLAM", "Autonome"],
     media: "/xplore_rover.png",
     results: [
       "Navigation autonome sur terrain accidenté",
-      "Évitement d'obstacles en temps réel",
-      "Localisation précise en environnement GPS-denied"
+      "Plusieurs systèmes de localisation en environnement GPS-denied",
+      "Participation à la compétition European Rover Challenge 2026"
     ],
     isMain: true,
     priority: 1,
@@ -30,9 +30,9 @@ export const allProjects = [
     category: ["Contrôle", "Simulation", "Manipulation"],
     media: "/bras_robot_4_axes.png",
     results: [
-      "Précision de positionnement: ±2mm",
-      "Temps de cycle pick & place: 3.5s",
-      "Contrôle basé modèle avec erreur de suivi < 5%"
+      "Précision de positionnement: ±5mm",
+      "Temps de cycle pick & place: 5s",
+      "Contrôle basé sur le modèle dynamique"
     ],
     isMain: true,
     priority: 2,
@@ -44,13 +44,13 @@ export const allProjects = [
     title: "ML Pipeline pour capteur de force EIT",
     date: "2025",
     location: "EPFL",
-    desc: "Développement d'un pipeline de machine learning pour mesurer la force, l'humidité et la température à partir de la technologie de capteurs EIT (Electrical Impedance Tomography).",
+    desc: "Développement d'un pipeline de machine learning pour mesurer la force, l'humidité et la température à partir de la technologie d'un capteur EIT (Electrical Impedance Tomography).",
     tech: ["Machine Learning", "Modélisation", "Évaluation", "Optimisation", "Python", "PyTorch", "MATLAB"],
     category: ["Machine Learning", "Capteurs"],
     media: "/tongue_ml_pipeline.png",
     results: [
-      "Précision de mesure de force: 94%",
-      "Fusion multi-capteurs (force + humidité + température)",
+      "Précision de mesure de force: En cours",
+      "Obtention de plusieurs mesures depuis un unique signal (force + humidité + température)",
       "Modèle optimisé pour hardware embarqué"
     ],
     isMain: true,
@@ -63,7 +63,7 @@ export const allProjects = [
     title: "Hackaton Exolegend",
     date: "2025",
     location: "Lyon",
-    desc: "Compétition de 50 équipes dédiée aux étudiants et ingénieurs, organisée par Exotec. Développement d'algorithmes de navigation et d'attaque/défense dans un labyrinthe dynamique.",
+    desc: "Compétition de 50 équipes dédiée aux étudiants et ingénieurs en temps limité, organisée par Exotec. Développement d'algorithmes de navigation et d'attaque/défense dans un labyrinthe dynamique.",
     tech: ["C++", "Navigation", "Path Planning", "Stratégie"],
     category: ["Navigation", "Compétition"],
     media: "/hackaton_studio.png",
@@ -87,9 +87,9 @@ export const allProjects = [
     category: ["Simulation", "Contrôle", "Locomotion"],
     media: "/simu_mujoco.png",
     results: [
-      "Marche stable sur 100+ pas consécutifs",
-      "Efficacité énergétique améliorée de 30%",
-      "Robustesse face aux perturbations externes"
+      "Preuve de fonctionnement via les premiers pas consécutifs",
+      "Efficacité énergétique améliorée par rapport aux approches actuelles de contrôle par RL",
+      "Base pour futurs travaux en locomotion bipède"
     ],
     isMain: true,
     priority: 5,
@@ -99,16 +99,17 @@ export const allProjects = [
   {
     id: 2,
     title: "Responsable projets",
-    date: "2023-2024",
-    location: "ClubTech - CentraleSupélec",
-    desc: "Gestion et coordination d'une équipe de 15 étudiants pour la réalisation de projets robotiques innovants, avec planification, suivi et validation des résultats.",
+    date: "2024-2025",
+    location: "Association ClubTech - CentraleSupélec",
+    desc: "Création, gestion et coordination d'une équipe de 10+ étudiants pour la réalisation de projets techniques en parallèle, avec planification, suivi et validation des résultats.",
     tech: ["Gestion", "Leadership", "Communication", "Organisation", "Suivi", "Validation", "Formation", "Documentation"],
     category: ["Management", "Leadership"],
     media: "/gala_sourire.jpg",
     results: [
-      "15 étudiants encadrés",
-      "5+ projets robotiques menés à terme",
-      "Organisation d'ateliers de formation technique"
+      "Création, gestion, coordination et présentation du pôle lors du gala annuel rassemblant 100+ personnes",
+      "10+ étudiants encadrés et motivés",
+      "10+ projets robotiques menés à terme",
+
     ],
     isMain: true,
     priority: 6,

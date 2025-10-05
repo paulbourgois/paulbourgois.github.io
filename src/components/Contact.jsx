@@ -34,7 +34,7 @@ function Contact() {
               <div className="inline-flex items-center gap-2 bg-orange-50 border-2 border-orange-500 px-6 py-3 rounded-lg">
                 <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
                 <span className="font-bold text-orange-800">Disponible pour un stage de 6 mois</span>
-                <span className="text-orange-600 text-sm">(Janvier - Juin 2026)</span>
+                <span className="text-orange-600 text-sm">(Février - Août 2027)</span>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ function Contact() {
             </a>
 
             <button
-              onClick={() => window.open('/cv.pdf', '_blank')}
+              onClick={() => window.open('/CV.pdf', '_blank')}
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg transition-all hover:scale-105 shadow-md"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">

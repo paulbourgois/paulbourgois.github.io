@@ -40,7 +40,7 @@ export default function Hero() {
         {/* Stats avec animations hover */}
         <div className="flex flex-wrap justify-center gap-6 mb-10">
           <div className="bg-white/80 backdrop-blur-sm rounded-lg px-8 py-5 shadow-md border border-orange-500/30 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">
-            <div className="text-3xl font-bold text-orange-600 mb-2">13+</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
             <div className="text-base text-gray-700 font-semibold">Projets Robotique</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm rounded-lg px-8 py-5 shadow-md border border-blue-500/30 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">
@@ -65,11 +65,11 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="bg-gradient-to-r from-orange-50 to-blue-50 border-2 border-orange-500 p-6 max-w-2xl mx-auto rounded-lg shadow-md">
-          <div className="flex items-center gap-3 justify-center">
+        <div className="bg-gradient-to-r from-orange-50 to-blue-50 border-2 border-orange-500 p-6 max-w-4xl mx-auto rounded-lg shadow-md">
+          <div className="flex items-center gap-3 justify-center whitespace-nowrap">
             <span className="text-2xl">🎯</span>
             <p className="text-black/90 text-base md:text-lg font-semibold">
-              Recherche stage 6 mois (Jan-Juin 2026) en Robotique Autonome
+              Recherche stage 6 mois (Février - Août 2027) en Robotique Autonome
             </p>
           </div>
         </div>

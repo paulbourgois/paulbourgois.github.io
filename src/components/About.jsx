@@ -7,7 +7,7 @@ export default function About() {
       <div
         className="absolute inset-0 -z-10 bg-center bg-cover filter saturate-90"
         style={{
-          backgroundImage: "url('/gala_sourire.jpg')",
+          backgroundImage: "url('/gala_sourire_petit.jpg')",
           opacity: 0.12,
           transform: "scale(1.05)",
         }}
@@ -26,11 +26,11 @@ export default function About() {
           <div className="text-sm text-gray-600 font-medium">Grandes Écoles</div>
           <div className="text-xs text-gray-500 mt-1">CentraleSupélec • EPFL</div>
         </div>
-        <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-orange-500/20 text-center hover:shadow-lg transition-shadow">
-          <div className="text-3xl font-bold text-orange-600 mb-1">13</div>
+        <a href="#projects" className="bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-orange-500/20 text-center hover:shadow-lg transition-shadow cursor-pointer hover:border-orange-500/40 hover:scale-105 transition-all">
+          <div className="text-3xl font-bold text-orange-600 mb-1">10+</div>
           <div className="text-sm text-gray-600 font-medium">Projets Robotiques</div>
           <div className="text-xs text-gray-500 mt-1">6 principaux</div>
-        </div>
+        </a>
         <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-blue-500/20 text-center hover:shadow-lg transition-shadow">
           <div className="text-3xl font-bold text-blue-700 mb-1">3</div>
           <div className="text-sm text-gray-600 font-medium">Domaines</div>
@@ -39,11 +39,11 @@ export default function About() {
         <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-orange-500/20 text-center hover:shadow-lg transition-shadow">
           <div className="text-3xl font-bold text-orange-600 mb-1">✓</div>
           <div className="text-sm text-gray-600 font-medium">Disponible</div>
-          <div className="text-xs text-gray-500 mt-1">Stage 6 mois</div>
+          <div className="text-xs text-gray-500 mt-1">Fév - Août 2027</div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-start">
+      <div className="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <div className="font-mono text-xs text-blue-700/80 font-semibold mb-4 tracking-widest">
             FORMATION & PARCOURS
@@ -70,15 +70,6 @@ export default function About() {
                     <div className="text-xs font-bold text-orange-600">2023-2027</div>
                     <div className="text-sm font-semibold text-black">Cycle ingénieur</div>
                     <div className="text-xs text-gray-600">Spécialisation Robotique</div>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 relative">
-                  <div className="w-6 h-6 bg-gray-400 rounded-full border-4 border-white z-10 flex-shrink-0"></div>
-                  <div className="flex-1 pt-0.5">
-                    <div className="text-xs font-bold text-gray-500">2021-2023</div>
-                    <div className="text-sm font-semibold text-gray-700">Classes Préparatoires</div>
-                    <div className="text-xs text-gray-600">MPSI/PSI - Stanislas</div>
                   </div>
                 </div>
               </div>
@@ -110,7 +101,7 @@ export default function About() {
 
         {/** Image intégrée comme élément visuel */}
         <div className="relative">
-          <div className="w-full h-96 mx-auto relative border border-black/10 bg-white/40 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <div className="w-full h-80 mx-auto relative border border-black/10 bg-white/40 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <img
               src="/gala_sourire.jpg"
               alt="Paul Bourgois"
@@ -121,7 +112,7 @@ export default function About() {
 
             {/* Badge sur l'image */}
             <div className="absolute bottom-4 right-4 bg-orange-500 text-white px-4 py-2 rounded-lg shadow-lg font-bold text-sm">
-              ✓ Disponible Stage 6 mois
+              ✓ Disponible pour un stage de 6 mois
             </div>
           </div>
         </div>

@@ -4,10 +4,10 @@ const skills = [
   {
     cat: "Contrôle & Modélisation",
     items: [
-      { name: "MATLAB/Simulink", level: "Expert" },
-      { name: "Dynamique", level: "Expert" },
-      { name: "Cinématique", level: "Expert" },
-      { name: "Contrôle optimal", level: "Avancé" }
+      { name: "Optimisation", level: "Expert" },
+      { name: "Dynamique, Cinématique", level: "Expert" },
+      { name: "MATLAB, Simulink", level: "Avancé" },
+      { name: "Mujoco, Gazebo", level: "Avancé" },
     ],
     icon: "🎮"
   },
@@ -15,50 +15,49 @@ const skills = [
     cat: "Intelligence Artificielle",
     items: [
       { name: "Python", level: "Expert" },
-      { name: "TensorFlow", level: "Avancé" },
-      { name: "OpenCV", level: "Expert" },
+      { name: "Machine Learning", level: "Expert" },
+      { name: "Reinforcement Learning", level: "Avancé" },
       { name: "Deep Learning", level: "Avancé" }
     ],
-    icon: "�"
+    icon: "🧠"
   },
   {
     cat: "Systèmes Embarqués",
     items: [
-      { name: "C/C++", level: "Avancé" },
+      { name: "C/C++", level: "Expert" },
       { name: "ROS2", level: "Expert" },
-      { name: "Arduino", level: "Expert" },
-      { name: "Fusion capteurs", level: "Avancé" }
+      { name: "Fusion capteurs", level: "Expert" },
+      { name: "Microcontrôleur", level: "Avancé" },
     ],
     icon: "⚡"
   },
   {
-    cat: "Mécanique & Conception",
+    cat: "Outils",
     items: [
-      { name: "SolidWorks", level: "Avancé" },
-      { name: "CAO/DAO", level: "Avancé" },
-      { name: "Mécanique analytique", level: "Expert" },
-      { name: "Conception mécatronique", level: "Avancé" }
-    ],
-    icon: "⚙️"
-  },
-  {
-    cat: "Outils & Simulation",
-    items: [
-      { name: "Gazebo", level: "Avancé" },
-      { name: "MuJoCo", level: "Avancé" },
+      { name: "Git", level: "Expert" },
       { name: "Docker", level: "Avancé" },
-      { name: "Git", level: "Expert" }
+      { name: "CAD Software", level: "Avancé" },
     ],
-    icon: "�️"
+    icon: "🔧"
   },
   {
     cat: "Leadership & Gestion",
     items: [
-      { name: "Gestion de projet", level: "Avancé" },
       { name: "Communication", level: "Expert" },
-      { name: "Travail d'équipe", level: "Expert" }
+      { name: "Gestion de projet", level: "Avancé" },
+      { name: "Suivi & Validation", level: "Avancé" }
     ],
     icon: "👥"
+  },
+  {
+  cat: "Soft Skills",
+  items: [
+    { name: "Communication", level: "Expert" },
+    { name: "Adaptabilité", level: "Expert" },
+    { name: "Résolution de problèmes", level: "Expert" },
+
+  ],
+  icon: "👥"
   }
 ];
 
