@@ -205,10 +205,8 @@ export default function AllProjects() {
                   <div className="mb-3 space-y-1">
                     {p.results.map((result, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-xs text-gray-700">{result}</span>
+                        <span className="text-green-600 text-sm mt-0.5">✓</span>
+                        <span className="text-xs text-gray-700 leading-tight">{result}</span>
                       </div>
                     ))}
                   </div>
