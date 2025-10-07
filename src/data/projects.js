@@ -121,14 +121,13 @@ export const allProjects = [
     title: "PCB Design: Coupe de France de Robotique",
     date: "2023",
     location: "ClubTech CentraleSupélec",
-    desc: "Conception et fabrication de cartes électroniques pour le robot participant à la Coupe de France de Robotique, incluant les systèmes de contrôle, puissance et communication.",
+    desc: "Conception et fabrication de cartes électroniques pour le robot participant à la Coupe de France de Robotique 2024, incluant les systèmes depuissance et communication.",
     tech: ["EasyEDA", "PCB Design", "Électronique", "Prototypage", "Soudure"],
     category: ["Hardware", "Électronique"],
     media: "/pcb_coupe_de_france_de_robotique.png",
     results: [
-      "3 PCB conçus et fabriqués",
-      "Système de contrôle moteur robuste",
-      "Communication CAN bus fiable"
+      "1 PCB conçus et fabriqués",
+      "Système de contrôle pour zone de calcul",
     ],
     isMain: false,
     github: null,
@@ -145,8 +144,8 @@ export const allProjects = [
     media: "/drone_roulant.png",
     results: [
       "Adhérence verticale fonctionnelle",
-      "Transition air-mur automatisée",
-      "Contrôle de stabilité PID optimisé"
+      "Contrôle de stabilité PID optimisé",
+      "Capable de naviguer sur surfaces variées de façon autonome"
     ],
     isMain: false,
     github: null,
@@ -158,7 +157,7 @@ export const allProjects = [
     date: "2024",
     location: "Projet personnel",
     desc: "Conception d'un robot autonome capable de suivre une personne en temps réel en utilisant des techniques de vision par ordinateur et des capteurs de proximité.",
-    tech: ["Arduino", "Raspberry Pi", "OpenCV", "Computer Vision", "Suivi d'objets"],
+    tech: ["Arduino", "Raspberry Pi", "OpenCV", "Computer Vision"],
     category: ["Computer Vision", "Autonome"],
     media: "/robot_follower.png",
     results: [
@@ -182,7 +181,7 @@ export const allProjects = [
     results: [
       "Vitesse moyenne: 0.8 m/s",
       "Erreur de trajectoire < 2cm",
-      "Parcours complexe réussi à 95%"
+      "Système de livraison autonome fonctionnel dans un labyrinthe dynamique"
     ],
     isMain: false,
     github: null,
@@ -236,7 +235,7 @@ export const allProjects = [
     results: [
       "Communication temps réel via Zenoh",
       "Latence de communication < 10ms",
-      "Navigation collaborative multi-robots"
+      "Navigation autonome en environnement dynamique"
     ],
     isMain: false,
     github: null,
