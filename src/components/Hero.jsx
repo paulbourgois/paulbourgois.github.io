@@ -24,51 +24,51 @@ export default function Hero() {
       {/* Contenu principal */}
       <div className="text-center z-10 px-4 max-w-5xl mx-auto">
 
-        <h1 className="hero-title text-6xl md:text-8xl font-bold mb-6 tracking-tighter text-black">
+        <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tighter text-black leading-tight">
           FUTURE IS <span className="text-orange-500">NEAR</span>
         </h1>
 
         <div className="flex flex-col gap-4 mb-8">
-          <p className="text-xl md:text-2xl text-black/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-black/80 max-w-2xl mx-auto leading-relaxed">
             • Ingénieur Robotique & Automatique •
           </p>
-          <p className="text-base md:text-lg text-black/70 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-black/70 max-w-3xl mx-auto">
             Spécialisé en <span className="font-semibold text-orange-600">Contrôle</span>, <span className="font-semibold text-orange-600">Intelligence Artificielle</span> et <span className="font-semibold text-orange-600">Systèmes Embarqués</span>
           </p>
         </div>
 
         {/* Stats avec animations hover */}
-        <div className="flex flex-wrap justify-center gap-6 mb-10">
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg px-8 py-5 shadow-md border border-orange-500/30 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">
-            <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
-            <div className="text-base text-gray-700 font-semibold">Projets Robotique</div>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg px-6 sm:px-8 py-4 sm:py-5 shadow-md border border-orange-500/30 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">
+            <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-2">10+</div>
+            <div className="text-sm sm:text-base text-gray-700 font-semibold">Projets Robotique</div>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg px-8 py-5 shadow-md border border-blue-500/30 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">
-            <div className="text-lg font-bold text-blue-700 mb-2">CentraleSupélec - EPFL</div>
-            <div className="text-sm text-gray-600">Diplôme d'ingénieur</div>
-            <div className="text-sm text-gray-600">Master en Robotique</div>
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg px-6 sm:px-8 py-4 sm:py-5 shadow-md border border-blue-500/30 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">
+            <div className="text-base sm:text-lg font-bold text-blue-700 mb-2">CentraleSupélec - EPFL</div>
+            <div className="text-xs sm:text-sm text-gray-600">Diplôme d'ingénieur</div>
+            <div className="text-xs sm:text-sm text-gray-600">Master en Robotique</div>
           </div>
         </div>
 
-        <div className="hero-button-container flex flex-wrap justify-center gap-4 mb-10">
-          <a href="#videos" className="btn-primary inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl font-bold">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <div className="hero-button-container flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
+          <a href="#videos" className="btn-primary inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl font-bold text-sm sm:text-base">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" className="sm:w-5 sm:h-5">
               <path d="M8 5v14l11-7z"/>
             </svg>
             <span className="font-mono tracking-wider">VOIR LES VIDÉOS</span>
           </a>
-          <a href="#contact" className="btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 font-mono tracking-wider font-bold">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <a href="#contact" className="btn-secondary inline-flex items-center gap-2 px-5 sm:px-6 py-3 rounded-lg border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 font-mono tracking-wider font-bold text-sm sm:text-base">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" className="sm:w-5 sm:h-5">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
             ME CONTACTER
           </a>
         </div>
 
-        <div className="bg-gradient-to-r from-orange-50 to-blue-50 border-2 border-orange-500 p-6 max-w-4xl mx-auto rounded-lg shadow-md">
-          <div className="flex items-center gap-3 justify-center whitespace-nowrap">
-            <span className="text-2xl">🎯</span>
-            <p className="text-black/90 text-base md:text-lg font-semibold">
+        <div className="bg-gradient-to-r from-orange-50 to-blue-50 border-2 border-orange-500 p-4 sm:p-6 max-w-4xl mx-auto rounded-lg shadow-md">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 justify-center">
+            <span className="text-xl sm:text-2xl">🎯</span>
+            <p className="text-black/90 text-sm sm:text-base md:text-lg font-semibold text-center sm:text-left">
               Recherche stage 6 mois (Février - Août 2027) en Robotique Autonome
             </p>
           </div>
